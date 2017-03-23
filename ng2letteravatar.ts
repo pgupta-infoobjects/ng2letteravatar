@@ -159,7 +159,7 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
             c = this.data.substring(0, +this.charCount).toUpperCase();
         }
         var textTag = this.getCharacterTextTag(c, this.textColor, this.fontFamily, this.fontWeight, this.fontsize);
-        var colorIndex;
+        var colorIndex: any;
         var color = '';
 
         /**
@@ -179,7 +179,7 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
         this.createSvg(this.width, this.height, color, textTag);
         var lvcomponent = this.getLVText();
         var svgHtml = window.btoa(unescape(encodeURIComponent(lvcomponent)));
-        var component;
+        var component: any;
         var base = this.base;
         var _style = '';
         if (this.avatarBorderStyle) {
@@ -232,7 +232,7 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
  * @param {type} color
  * @returns {unresolved}
  */
-    private createSvg(width, height, color, cobj): string {
+    private createSvg(width: any, height: any, color: any, cobj: any): string {
 
         var svgTag = document.createElement('svg');
         svgTag.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
@@ -257,7 +257,7 @@ export class Ng2LetterAvatar implements OnInit, OnDestroy, AfterViewInit {
  * @param {type} fontsize
  * @returns {unresolved}
  */
-    private getCharacterTextTag(character, textColor, fontFamily, fontWeight, fontsize): HTMLElement {
+    private getCharacterTextTag(character: any, textColor: any, fontFamily: any, fontWeight: any, fontsize: any): HTMLElement {
         var textTag = document.createElement('text');
         textTag.setAttribute('text-anchor', 'middle');
         textTag.setAttribute('x', '50%');
@@ -300,7 +300,7 @@ function getRandomColors() {
  * @param {type} data
  * @returns {unresolved}
  */
-function getFirstAndLastName(data) {
+function getFirstAndLastName(data: any) {
     var names = data.split(" ");
     if (names && names.length >= 2) {
         var firstName = names[0];
